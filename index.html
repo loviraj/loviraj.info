@@ -32,6 +32,134 @@
 .home-quote{padding:7rem 1.5rem;text-align:center;background:linear-gradient(135deg,#0b1b30,#162b4b);color:#fff}.home-quote blockquote{font-family:Georgia,serif;font-size:clamp(30px,5vw,62px);line-height:1.18;max-width:1000px;margin:0 auto;color:#f0c040}.home-quote cite{display:block;font-size:10px;letter-spacing:4px;color:#8294ae;text-transform:uppercase;margin-top:1.5rem;font-style:normal}
 @media(max-width:800px){.philosophy-layout{grid-template-columns:1fr;gap:3rem;padding:5rem 0}.ph-portrait{justify-self:center}.credo-grid,.metaphor-grid{grid-template-columns:1fr}.trajectory-grid,.venture-grid{grid-template-columns:1fr 1fr}.ph-title{letter-spacing:-1.5px}.ideology,.metaphor-section,.trajectory,.venture-section{padding:4.5rem 0}}
 @media(max-width:520px){.trajectory-grid,.venture-grid{grid-template-columns:1fr}.ph-actions{flex-direction:column;align-items:flex-start}.ph-portrait img{width:260px;height:260px}}
+
+/* HERO ALIGNMENT v2 — balanced across desktop, tablet and mobile */
+.home-hero{
+  min-height:calc(100svh - 155px);
+  display:flex;
+  align-items:center;
+}
+.philosophy-layout{
+  width:100%;
+  max-width:1660px;
+  margin:0 auto;
+  grid-template-columns:minmax(0,1.18fr) minmax(340px,.82fr);
+  gap:clamp(3rem,6vw,7rem);
+  align-items:center;
+  padding:clamp(3.5rem,6vh,6rem) 0;
+}
+.hero-thought-column{
+  width:100%;
+  max-width:800px;
+}
+.ph-eyebrow{margin-bottom:1.5rem}
+.hero-thought-carousel{
+  width:100%;
+  max-width:760px;
+  margin:0;
+}
+.hero-thought-carousel .thought-card{
+  width:100%;
+  min-height:390px;
+  box-sizing:border-box;
+  padding:2.35rem clamp(2rem,4vw,3.4rem) 1.45rem;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.hero-thought-carousel .thought-slide{
+  min-height:285px;
+}
+.hero-thought-carousel .thought-text{
+  font-size:clamp(42px,4.15vw,72px);
+  line-height:.99;
+  letter-spacing:-2px;
+  max-width:690px;
+}
+.hero-thought-carousel .thought-sub{
+  font-size:clamp(13px,1.1vw,16px);
+  line-height:1.65;
+  max-width:570px;
+  margin-top:1.35rem;
+}
+.hero-thought-carousel .thought-controls{margin-top:auto}
+.hero-signature{font-size:17px;max-width:650px;margin:1.35rem 0 0}
+.ph-actions{margin-top:1.6rem}
+.ph-portrait{
+  justify-self:center;
+  width:min(390px,100%);
+}
+.ph-portrait:before{
+  width:calc(100% + 28px);
+  height:calc(100% + 28px);
+}
+.ph-portrait img{
+  width:min(370px,100%);
+  height:min(370px,100%);
+  display:block;
+  margin:0 auto;
+}
+
+@media (max-width:1250px){
+  .philosophy-layout{
+    grid-template-columns:minmax(0,1.12fr) minmax(300px,.88fr);
+    gap:3.5rem;
+    padding-left:1rem;padding-right:1rem;
+  }
+  .hero-thought-carousel .thought-card{min-height:370px}
+  .hero-thought-carousel .thought-text{font-size:clamp(38px,4.7vw,62px)}
+  .ph-portrait img{width:330px;height:330px}
+}
+
+@media (max-width:900px){
+  .home-hero{min-height:auto}
+  .philosophy-layout{
+    grid-template-columns:1fr;
+    gap:2.8rem;
+    text-align:center;
+    padding:4.5rem 1.25rem 5rem;
+  }
+  .hero-thought-column{max-width:760px;margin:0 auto}
+  .ph-eyebrow{letter-spacing:3.5px}
+  .hero-thought-carousel{max-width:720px;margin:0 auto;text-align:left}
+  .hero-thought-carousel .thought-card{min-height:350px}
+  .hero-thought-carousel .thought-text{font-size:clamp(38px,7vw,58px)}
+  .hero-signature{margin-left:auto;margin-right:auto}
+  .ph-actions{justify-content:center}
+  .ph-portrait{justify-self:center}
+}
+
+@media (max-width:600px){
+  .philosophy-layout{padding:3.5rem .9rem 4rem;gap:2.25rem}
+  .ph-eyebrow{font-size:8px;letter-spacing:2.5px;line-height:1.7}
+  .hero-thought-carousel .thought-card{
+    min-height:330px;
+    padding:1.7rem 1.45rem 1.25rem;
+    border-radius:15px;
+  }
+  .hero-thought-carousel .thought-slide{min-height:245px}
+  .hero-thought-carousel .thought-text{
+    font-size:clamp(34px,10vw,48px);
+    line-height:1.02;
+    letter-spacing:-1.2px;
+  }
+  .hero-thought-carousel .thought-sub{font-size:12px;line-height:1.6;margin-top:1rem}
+  .thought-label{letter-spacing:2.2px}
+  .hero-signature{font-size:16px}
+  .ph-actions{flex-direction:column;align-items:stretch;width:100%;max-width:340px;margin-left:auto;margin-right:auto}
+  .ph-actions .btn{text-align:center}
+  .ph-portrait{width:285px}
+  .ph-portrait img{width:265px;height:265px}
+  .ph-name{font-size:20px}
+}
+
+@media (max-width:380px){
+  .hero-thought-carousel .thought-card{min-height:320px;padding:1.45rem 1.2rem 1rem}
+  .hero-thought-carousel .thought-slide{min-height:235px}
+  .hero-thought-carousel .thought-text{font-size:32px}
+  .ph-portrait{width:250px}
+  .ph-portrait img{width:235px;height:235px}
+}
 </style>
 </head>
 <body>
