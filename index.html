@@ -160,6 +160,117 @@
   .ph-portrait{width:250px}
   .ph-portrait img{width:235px;height:235px}
 }
+
+/* HERO — final navy & gold composition */
+.home-hero{
+  min-height:calc(100svh - 155px);
+  background:
+    radial-gradient(circle at 72% 42%, rgba(214,169,59,.11), transparent 26%),
+    radial-gradient(circle at 18% 78%, rgba(37,101,151,.16), transparent 30%),
+    linear-gradient(135deg,#061a30 0%,#08213a 52%,#07192d 100%);
+}
+.home-hero:before{
+  background:
+    radial-gradient(circle at 72% 42%,rgba(240,192,64,.12),transparent 27%),
+    radial-gradient(circle at 12% 72%,rgba(51,112,161,.12),transparent 28%);
+}
+.home-hero:after{
+  opacity:.045;
+  background-image:
+    linear-gradient(30deg,#d6a93b 12%,transparent 12.5%,transparent 87%,#d6a93b 87.5%,#d6a93b),
+    linear-gradient(150deg,#d6a93b 12%,transparent 12.5%,transparent 87%,#d6a93b 87.5%,#d6a93b);
+  background-size:72px 124px;
+}
+.philosophy-layout{
+  max-width:1280px;
+  grid-template-columns:minmax(430px,1fr) minmax(430px,1fr);
+  gap:clamp(3rem,6vw,6rem);
+  padding:clamp(3.5rem,6vh,5.5rem) 0;
+}
+.hero-thought-column{max-width:430px;width:430px;justify-self:end}
+.ph-eyebrow{font-size:9px;letter-spacing:4px;color:#f0c040;margin-bottom:1.45rem;white-space:nowrap}
+.hero-thought-carousel{width:430px;max-width:430px}
+.hero-thought-carousel .thought-card{
+  width:430px;height:430px;min-height:430px;
+  padding:2.35rem 2.35rem 1.65rem;
+  border:0;
+  border-radius:0;
+  background:linear-gradient(145deg,rgba(8,29,51,.90),rgba(5,20,36,.72));
+  box-shadow:0 30px 80px rgba(0,0,0,.32);
+}
+.hero-thought-carousel .thought-card:before{
+  content:'“';right:20px;top:-20px;font-size:130px;color:rgba(240,192,64,.11);
+}
+.hero-thought-carousel .thought-slide{min-height:335px}
+.hero-thought-carousel .thought-label{
+  font-size:9px;letter-spacing:3.5px;color:#e1b449;margin-bottom:1.25rem;
+}
+.hero-thought-carousel .thought-text{
+  font-size:clamp(38px,3.7vw,58px);
+  line-height:1.02;
+  letter-spacing:-1.7px;
+  max-width:380px;
+}
+.hero-thought-carousel .gold-word{
+  color:#f4c84a;
+  text-shadow:0 0 24px rgba(240,192,64,.12);
+}
+.hero-thought-carousel .thought-sub{
+  font-size:13px;line-height:1.65;color:#a9b9cc;max-width:355px;margin-top:1.35rem;
+}
+.hero-thought-carousel .thought-controls{margin-top:auto}
+.hero-thought-carousel .thought-dot{background:#5d7088}
+.hero-thought-carousel .thought-dot.active{background:#f0c040}
+.hero-thought-carousel .thought-arrow{border-color:rgba(240,192,64,.65);color:#f0c040}
+.hero-thought-carousel .thought-arrow:hover{background:#f0c040;color:#07192d}
+.hero-signature{font-size:16px;color:#a9b9cc;max-width:430px;margin:1.2rem 0 0}
+.ph-actions{margin-top:1.4rem}
+.ph-portrait{width:430px;justify-self:start}
+.ph-portrait:before{
+  width:calc(100% + 34px);height:calc(100% + 34px);
+  border-color:rgba(240,192,64,.30);
+  box-shadow:0 0 85px rgba(240,192,64,.10);
+}
+.ph-portrait img{
+  width:430px;height:430px;
+  border:6px solid rgba(240,192,64,.55);
+  box-shadow:0 25px 80px rgba(0,0,0,.38),0 0 45px rgba(240,192,64,.08);
+}
+.ph-name{color:#f4c84a;font-size:22px}
+.ph-role{color:#9aabc0}
+
+@media(max-width:1050px){
+  .philosophy-layout{grid-template-columns:430px 430px;gap:3rem;justify-content:center}
+  .hero-thought-column,.ph-portrait{justify-self:center}
+  .ph-eyebrow{font-size:8px;letter-spacing:3px}
+}
+@media(max-width:900px){
+  .home-hero{min-height:auto}
+  .philosophy-layout{grid-template-columns:1fr;gap:3.25rem;padding:4.5rem 1rem 5rem}
+  .hero-thought-column{width:min(430px,92vw);max-width:430px}
+  .hero-thought-carousel{width:100%;max-width:430px}
+  .hero-thought-carousel .thought-card{width:100%;height:auto;min-height:min(92vw,430px);aspect-ratio:1/1}
+  .hero-thought-carousel .thought-slide{min-height:0}
+  .ph-portrait{width:min(430px,92vw)}
+  .ph-portrait img{width:min(430px,92vw);height:min(430px,92vw)}
+  .ph-eyebrow{text-align:center;white-space:normal}
+  .hero-signature{margin-left:auto;margin-right:auto;text-align:center}
+  .ph-actions{justify-content:center}
+}
+@media(max-width:520px){
+  .philosophy-layout{padding:3.25rem .8rem 4rem;gap:2.5rem}
+  .hero-thought-carousel .thought-card{padding:1.7rem 1.55rem 1.2rem;min-height:calc(100vw - 25px)}
+  .hero-thought-carousel .thought-label{font-size:8px;letter-spacing:2.3px}
+  .hero-thought-carousel .thought-text{font-size:clamp(31px,9.5vw,45px);letter-spacing:-1px}
+  .hero-thought-carousel .thought-sub{font-size:11.5px;max-width:290px}
+  .ph-portrait{width:min(330px,88vw)}
+  .ph-portrait img{width:min(330px,88vw);height:min(330px,88vw)}
+  .ph-name{font-size:20px}
+}
+@media(max-width:370px){
+  .hero-thought-carousel .thought-text{font-size:29px}
+  .hero-thought-carousel .thought-sub{font-size:11px}
+}
 </style>
 </head>
 <body>
@@ -170,11 +281,11 @@
 <div class="hero-thought-column"><div class="ph-eyebrow">Academic Leader · Researcher · Innovator · Teacher</div>
 <div class="thought-carousel hero-thought-carousel" aria-label="Lovi Raj Gupta's guiding thoughts">
   <div class="thought-card">
-    <div class="thought-slide active"><span class="thought-label">A belief that became an ideology</span><p class="thought-text">Stop Teaching. Start Engaging.</p><p class="thought-sub">Learning begins when attention turns into participation.</p></div>
-    <div class="thought-slide"><span class="thought-label">A way of explaining</span><p class="thought-text">Explain the difficult through the familiar.</p><p class="thought-sub">Find the doorway people already know, then open it to a new idea.</p></div>
-    <div class="thought-slide"><span class="thought-label">A philosophy of learning</span><p class="thought-text">Curiosity is the Curriculum.</p><p class="thought-sub">The right question can become the beginning of the lesson.</p></div>
-    <div class="thought-slide"><span class="thought-label">A design principle</span><p class="thought-text">Turn Attention into Intention.</p><p class="thought-sub">Do not merely capture attention. Give it somewhere meaningful to go.</p></div>
-    <div class="thought-slide"><span class="thought-label">An innovation instinct</span><p class="thought-text">Make the idea stick.</p><p class="thought-sub">Use stories, metaphors and experiences as anchors for understanding.</p></div>
+    <div class="thought-slide active"><span class="thought-label">A belief that became an ideology</span><p class="thought-text">Stop Teaching.<br><span class="gold-word">Start Engaging.</span></p><p class="thought-sub">Learning begins when attention turns into participation.</p></div>
+    <div class="thought-slide"><span class="thought-label">A way of explaining</span><p class="thought-text"><span class="gold-word">Explain</span> the difficult<br>through the <span class="gold-word">familiar.</span></p><p class="thought-sub">Find the doorway people already know, then open it to a new idea.</p></div>
+    <div class="thought-slide"><span class="thought-label">A philosophy of learning</span><p class="thought-text"><span class="gold-word">Curiosity</span> is the<br>Curriculum.</p><p class="thought-sub">The right question can become the beginning of the lesson.</p></div>
+    <div class="thought-slide"><span class="thought-label">A design principle</span><p class="thought-text">Turn <span class="gold-word">Attention</span><br>into Intention.</p><p class="thought-sub">Do not merely capture attention. Give it somewhere meaningful to go.</p></div>
+    <div class="thought-slide"><span class="thought-label">An innovation instinct</span><p class="thought-text">Make the <span class="gold-word">idea stick.</span></p><p class="thought-sub">Use stories, metaphors and experiences as anchors for understanding.</p></div>
     <div class="thought-controls"><div class="thought-dots" role="tablist" aria-label="Thoughts"><button class="thought-dot active" type="button" aria-label="Thought 1"></button><button class="thought-dot" type="button" aria-label="Thought 2"></button><button class="thought-dot" type="button" aria-label="Thought 3"></button><button class="thought-dot" type="button" aria-label="Thought 4"></button><button class="thought-dot" type="button" aria-label="Thought 5"></button></div><button class="thought-arrow" type="button" aria-label="Next thought">→</button></div>
   </div>
 </div>
